@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Member Area</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MEMBER AREA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link active" href="member.html">Member</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h3 class="text-center mb-4">Daftar Produk</h3>
+
+  <!-- Form tambah produk -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Tambah Produk</h5>
+      <form id="productForm">
+        <div class="mb-3">
+          <input type="text" id="name" class="form-control" placeholder="Nama Produk" required />
+        </div>
+        <div class="mb-3">
+          <input type="number" id="price" class="form-control" placeholder="Harga Produk" required />
+        </div>
+        <div class="mb-3">
+          <textarea id="deskripsi" class="form-control" placeholder="Deskripsi Produk" required></textarea>
+        </div>
+        <div class="mb-3">
+          <input type="file" id="photo" class="form-control" accept=".jpg,.jpeg,.png" required />
+        </div>
+        <button type="submit" class="btn btn-success w-100">Tambah</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tempat tampilkan produk -->
+  <div id="produkContainer" class="row"></div>
+</div>
+
+<script src="script/member.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
