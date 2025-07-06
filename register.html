@@ -2,64 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark">
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">REGISTER</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="register.html">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="member.html">Member</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card shadow">
-        <div class="card-body">
-          <h2 class="text-center mb-4">Register</h2>
-          <form id="registerForm">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nama Lengkap</label>
-              <input type="text" id="name" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text" id="username" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" id="password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-success w-100">Daftar</button>
-          </form>
-          <p class="mt-3 text-center">Sudah punya akun? <a href="index.html">Login di sini</a></p>
-        </div>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Frontend UAS</a>
+      <div class="d-flex">
+        <a href="index.html" class="btn btn-outline-light me-2">Login</a>
+        <a href="register.html" class="btn btn-outline-light me-2">Register</a>
+        <a href="member.html" class="btn btn-outline-light me-2">Member</a>
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
       </div>
     </div>
-  </div>
-</div>
+  </nav>
 
-<!-- Script -->
-<script src="script/register.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Register Card -->
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 w-100" style="max-width: 400px;">
+      <h2 class="mb-4 text-center">Register</h2>
+      <form id="registerForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required />
+        </div>
+        <button type="submit" class="btn btn-success">Register</button>
+        <p id="registerMsg" class="mt-3 text-danger"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
