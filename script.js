@@ -1,4 +1,4 @@
-const baseUrl = 'http://sandbox.sunariku.com';
+const baseUrl = 'https://sandbox.sunariku.com';
 
 // ==== LOGIN ====
 const loginForm = document.getElementById('loginForm');
